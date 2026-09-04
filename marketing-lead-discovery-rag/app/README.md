@@ -10,6 +10,7 @@ Working source-grounded research MVP for marketing and business-development lead
 - Shows source dates and citations for every profile.
 - Calculates a deterministic ICP fit score.
 - Includes a synthetic golden query set with Recall@3 and Precision@3 evaluation.
+- Includes no-evidence and freshness cases to test refusal and source-quality behavior.
 - Requires human review before any outreach action.
 - Optionally uses Azure AI Foundry to draft a profile constrained to displayed citations.
 

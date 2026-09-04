@@ -40,6 +40,11 @@ class LeadDiscoveryRagTests(unittest.TestCase):
         self.assertTrue(valid["citation_valid"])
         self.assertEqual(invalid["invalid_ids"], ["S999"])
 
+    def test_empty_evidence_case_is_represented(self):
+        result = evaluate_golden_dataset(self.sources, self.golden)
+        no_evidence = result[result["query"].str.contains("no evidence")].iloc[0]
+        self.assertFalse(no_evidence["lead_retrieved"])
+
 
 if __name__ == "__main__":
     unittest.main()

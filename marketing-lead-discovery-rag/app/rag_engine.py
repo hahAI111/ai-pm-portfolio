@@ -76,8 +76,9 @@ def evaluate_golden_dataset(sources: pd.DataFrame, golden: pd.DataFrame) -> pd.D
         retrieved = rerank_candidates(retrieve_candidates(sources, case["query"]), case["query"])
         ids = set(retrieved["source_id"].tolist())
         expected_ids = set(case["expected_source_ids"].split("|"))
-        lead_match = case["expected_lead_id"] in set(retrieved["lead_id"].tolist())
-        recall = len(ids & expected_ids) / len(expected_ids)
+        expected_lead = str(case["expected_lead_id"])
+        lead_match = expected_lead == "NONE" and retrieved.empty or expected_lead in set(retrieved["lead_id"].tolist())
+        recall = len(ids & expected_ids) / len(expected_ids) if expected_ids else (1.0 if expected_lead == "NONE" and retrieved.empty else 0.0)
         precision = len(ids & expected_ids) / len(ids) if ids else 0
         results.append({"query": case["query"], "lead_retrieved": lead_match, "recall_at_3": recall, "precision_at_3": precision})
     return pd.DataFrame(results)

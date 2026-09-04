@@ -2,3 +2,5 @@ query,expected_lead_id,expected_source_ids,expected_claim_keyword
 Which home organization company is expanding marketplace fulfillment?,L1001,"S001|S002",cross-border fulfillment
 Which pet company is hiring for international marketplace operations?,L1002,"S003|S004",international marketplace expansion
 Which fitness company is evaluating marketplace partnerships?,L1004,"S007|S008",marketplace partnerships
+Which company has no evidence of marketplace expansion?,NONE,"",no evidence
+Which company has the freshest marketplace expansion signal?,L1001,S002,cross-border fulfillment
