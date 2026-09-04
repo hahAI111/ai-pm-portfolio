@@ -59,6 +59,7 @@ flowchart LR
 - [Pilot Results Template](./pilot/pilot-results-template.md)
 - [Scale Iterate Stop Memo](./pilot/scale-iterate-stop-memo-template.md)
 - [PM Ownership Evidence Plan](./pm-ownership-evidence.md)
+- [Architecture Delivery Lifecycle](./architecture-delivery-lifecycle.md)
 
 The logbook also includes portfolio-specific answers on rules versus LLMs, MVP RAG boundaries, safe agent autonomy, and quality/safety expansion criteria.
 - [Growth Copilot Case Study](./ai-seller-growth-copilot/case-study.md)
