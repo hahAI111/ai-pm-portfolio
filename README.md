@@ -15,6 +15,7 @@ Three independent, working product MVPs for AI Product Manager roles in cross-bo
 | [AI Seller Growth Copilot](./ai-seller-growth-copilot/) | How can sellers diagnose growth blockers and act faster? | [App](./ai-seller-growth-copilot/app/) | AI diagnosis, prioritized actions, feedback loop, outcome simulation |
 | [Marketplace Opportunity Discovery Dashboard](./marketplace-opportunity-dashboard/) | Which seller segments and problems should the product roadmap prioritize? | [App](./marketplace-opportunity-dashboard/app/) | Opportunity sizing, scoring, prioritization, initiative recommendation |
 | [AI Seller Support Automation](./ai-seller-support-automation/) | How can AI improve support efficiency safely? | [App](./ai-seller-support-automation/app/) | Ticket triage, retrieval, response drafting, escalation guardrails |
+| [Marketing Lead Discovery RAG](./marketing-lead-discovery-rag/) | How can marketing research produce source-supported lead profiles? | [App](./marketing-lead-discovery-rag/app/) | Hybrid retrieval, reranking, citations, ICP scoring, offline evaluation |
 
 ## Product Narrative
 

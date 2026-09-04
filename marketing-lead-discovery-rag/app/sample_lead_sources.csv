@@ -1,0 +1,9 @@
+lead_id,company_name,region,source_id,source_title,source_date,source_type,content
+L1001,Northstar Home,US,S001,Northstar Home company profile,2026-08-12,Company profile,"Northstar Home sells space-saving home organization products through online marketplaces and operates a catalog of more than 80 products."
+L1001,Northstar Home,US,S002,Northstar Home expansion update,2026-08-28,News,"Northstar Home announced plans to expand cross-border fulfillment and grow marketplace sales in North America."
+L1002,GreenPaw Goods,UK,S003,GreenPaw Goods company profile,2026-07-18,Company profile,"GreenPaw Goods develops sustainable pet accessories and has an established direct-to-consumer business in the United Kingdom."
+L1002,GreenPaw Goods,UK,S004,GreenPaw Goods hiring update,2026-08-20,News,"GreenPaw Goods is hiring an e-commerce operations specialist to support international marketplace expansion."
+L1003,GlowNest Beauty,DE,S005,GlowNest Beauty profile,2026-06-10,Company profile,"GlowNest Beauty sells cosmetic accessories and emphasizes product design, quality control, and retail partnerships."
+L1003,GlowNest Beauty,DE,S006,GlowNest Beauty social post,2025-09-01,Social,"GlowNest Beauty shared a seasonal product promotion with its customer community."
+L1004,FlexTrail Fitness,JP,S007,FlexTrail Fitness profile,2026-08-03,Company profile,"FlexTrail Fitness offers compact training accessories and has grown its online product catalog across several Asian markets."
+L1004,FlexTrail Fitness,JP,S008,FlexTrail Fitness growth news,2026-08-25,News,"FlexTrail Fitness reported increased online demand and is evaluating new marketplace partnerships."
