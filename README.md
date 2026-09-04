@@ -6,7 +6,7 @@ Three independent, working product MVPs for AI Product Manager roles in cross-bo
 
 ## Watch the Demo
 
-[Watch or download the captioned 63-second portfolio walkthrough](https://github.com/hahAI111/ai-pm-portfolio/releases/download/v1.0-portfolio-demo/ai-pm-portfolio-demo-captioned.mp4) · [View the release](https://github.com/hahAI111/ai-pm-portfolio/releases/tag/v1.0-portfolio-demo)
+[Watch or download the captioned 63-second portfolio walkthrough](https://github.com/hahAI111/ai-pm-portfolio/releases/download/v1.0-portfolio-demo/ai-pm-portfolio-demo-captioned.mp4) · [Watch the narrated version](https://github.com/hahAI111/ai-pm-portfolio/releases/download/v1.0-portfolio-demo/ai-pm-portfolio-demo-narrated.mp4) · [View the release](https://github.com/hahAI111/ai-pm-portfolio/releases/tag/v1.0-portfolio-demo)
 
 ## Portfolio Projects
 
