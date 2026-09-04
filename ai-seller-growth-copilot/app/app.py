@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from diagnosis import diagnose_seller, generate_action_plan, generate_seller_response, seller_summary
+from llm_client import azure_openai_available, generate_with_azure_openai
 
 st.set_page_config(page_title="AI Seller Growth Copilot", layout="wide")
 
@@ -164,7 +165,20 @@ if st.button("Generate AI Recommendation", type="primary"):
         st.info("Enter a seller question to generate a recommendation.")
     else:
         with st.spinner("Analyzing seller signals..."):
-            response = generate_seller_response(row, diagnosis, question)
+            fallback_response = generate_seller_response(row, diagnosis, question)
+            if azure_openai_available():
+                try:
+                    response = generate_with_azure_openai(
+                        "You are a careful marketplace seller-growth assistant. Use only the supplied seller data and diagnosis. Provide concise, practical advice. Do not guarantee outcomes or recommend automatic changes.",
+                        "Seller question: " + question + "\nSeller data: " + str(row.to_dict()) + "\nDiagnosis: " + str(diagnosis) + "\nFallback: " + fallback_response,
+                    )
+                    st.caption("Response generated with Azure OpenAI, grounded in the displayed seller signals.")
+                except Exception:
+                    response = fallback_response
+                    st.warning("Azure OpenAI was unavailable, so the deterministic MVP fallback was used.")
+            else:
+                response = fallback_response
+                st.caption("Deterministic MVP fallback in use. Add Azure OpenAI secrets to enable model-generated wording.")
         st.success("Recommendation generated")
         st.write(response)
         st.caption("MVP safety note: recommendations are advisory. Sellers approve all operational changes.")

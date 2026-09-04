@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 from support_engine import classify_ticket, draft_response, retrieve_guidance
+from llm_client import azure_openai_available, generate_with_azure_openai
 
 st.set_page_config(page_title="AI Seller Support Automation", layout="wide")
 st.title("AI Seller Support Automation")
@@ -33,7 +34,21 @@ ticket_text = st.text_area("Seller message", value=selected_ticket["message"], h
 if st.button("Classify and draft response", type="primary"):
     classification = classify_ticket(ticket_text)
     guidance = retrieve_guidance(knowledge_base, classification["category"])
-    response = draft_response(ticket_text, classification, guidance)
+    fallback_response = draft_response(ticket_text, classification, guidance)
+    if azure_openai_available():
+        try:
+            response = generate_with_azure_openai(
+                "You are a careful marketplace seller-support assistant. Draft a short professional response using only the provided guidance. Never make a final policy decision, promise an outcome, or advise a policy bypass. If human review is required, tell the seller not to make the change before review.",
+                "Seller ticket: " + ticket_text + "\nClassification: " + str(classification) + "\nApproved guidance: " + guidance + "\nFallback: " + fallback_response,
+            )
+            st.session_state.azure_openai_used = True
+        except Exception:
+            response = fallback_response
+            st.session_state.azure_openai_used = False
+            st.warning("Azure OpenAI was unavailable, so the deterministic MVP fallback was used.")
+    else:
+        response = fallback_response
+        st.session_state.azure_openai_used = False
     st.session_state.latest_result = {
         "classification": classification,
         "guidance": guidance,
@@ -61,6 +76,8 @@ if result:
         st.subheader("Draft Seller Response")
         st.write(result["response"])
         st.caption("Safety design: the assistant drafts guidance, but does not make policy decisions or apply account changes.")
+        if st.session_state.get("azure_openai_used"):
+            st.caption("Response generated with Azure OpenAI and constrained by retrieved guidance and the escalation signal.")
 
     st.subheader("Agent Feedback")
     feedback_col1, feedback_col2, feedback_col3 = st.columns(3)
