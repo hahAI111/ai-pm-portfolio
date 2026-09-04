@@ -30,3 +30,9 @@ This MVP addresses repetitive seller-support work while keeping critical decisio
 ## Resume Positioning
 
 Use the heading **Independent AI Product Portfolio Projects — Global Seller Growth**. Describe the work as portfolio MVPs with synthetic data; do not present simulated metrics as employment results.
+
+## Cross-Functional Leadership Story
+
+Use this answer when asked how the portfolio would work in a real organization:
+
+I would begin by aligning the stakeholder system rather than treating the request as only an LLM feature. Sellers need useful and trustworthy actions. Seller-success and support teams need workflows that reduce repeated work. Data and engineering teams need feasible data boundaries and observable logic. Policy owners need escalation for sensitive decisions, while leadership needs measurable ROI. I would use a pilot to align these groups around shared metrics: action completion and business impact for adoption, quality and override rate for the operating teams, and escalation recall for safety. The rollout decision would depend on all three dimensions, not on usage alone.

@@ -59,6 +59,30 @@ The system uses a hybrid AI approach:
 ## Product Trade-offs
 The MVP prioritizes trust over automation. Instead of automatically changing listings or ads, the Copilot explains the issue, recommends actions, and asks sellers to approve changes. This reduces risk while building seller confidence.
 
+## Stakeholder Collaboration Plan
+
+| Stakeholder | Need or concern | PM interaction | Shared decision / metric |
+|---|---|---|---|
+| Sellers | Clear, trustworthy next actions | Interviews, beta feedback, in-product helpfulness feedback | Action completion and seller satisfaction |
+| Account Managers | Faster, consistent portfolio diagnosis | Workflow co-design and pilot review | Diagnosis time and seller coverage |
+| Data / Engineering | Feasible inputs and reliable results | Data-availability review and MVP scoping | Minimum data threshold and diagnosis accuracy |
+| Operations | Recommendations that can be executed | Launch-readiness walkthroughs | Completion rate and escalation workflow |
+| Policy / Legal | Avoid harmful or unsupported changes | Guardrail review and approval gates | Escalation recall and incorrect recommendation rate |
+| Leadership | Measurable seller-growth ROI | Business-case and roadmap reviews | Conversion lift, ROAS lift, and adoption |
+
+## Cross-functional Decision Story
+
+The initial request could be framed as an AI assistant that automatically changes seller listings and advertising settings. The PM recommendation is to avoid that launch scope. Account managers gain efficiency from a single diagnostic view, while data and engineering teams can first validate rules against available seller signals. Policy stakeholders require human review for sensitive guidance. The MVP therefore delivers evidence-backed recommendations and seller approval, then uses acceptance, completion, conversion, and escalation data to decide whether to expand automation.
+
+## Launch Plan
+
+1. Validate the problem with sellers and account managers; agree on top diagnosis scenarios.
+2. Run a data and engineering readiness review; set a minimum data-quality threshold.
+3. Review guardrails with operations and policy stakeholders; define mandatory human escalation.
+4. Pilot with one seller segment and a small account-manager cohort.
+5. Evaluate action completion, conversion movement, satisfaction, complaints, and escalation recall against a standard dashboard control.
+6. Review results with leadership before category expansion.
+
 ## Roadmap
 
 ### Phase 1: MVP
