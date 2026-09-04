@@ -1,0 +1,13 @@
+seller_id,category,region,monthly_gmv,gmv_growth_pct,orders,orders_growth_pct,conversion_rate,conversion_change_pct,ad_roas,listing_quality_score,active_products,inventory_health,return_rate,customer_rating
+S1001,Home Organization,US,74000,18,1860,15,3.9,4,3.1,78,42,Healthy,4.2,4.5
+S1002,Home Organization,UK,38800,6,940,3,3.4,-2,2.5,66,31,Healthy,6.1,4.2
+S1003,Kitchen Tools,US,96500,25,2250,28,4.6,6,3.8,84,58,Healthy,3.4,4.7
+S1004,Kitchen Tools,DE,31700,-4,760,-6,3.1,-7,2.1,72,25,Low,7.5,4.1
+S1005,Pet Supplies,US,52600,12,1280,9,4.1,2,2.9,81,36,Healthy,5.0,4.6
+S1006,Pet Supplies,JP,21400,31,520,34,3.7,8,3.3,76,18,Healthy,3.8,4.4
+S1007,Beauty Accessories,US,68300,8,1720,5,3.5,-3,2.2,63,47,Healthy,8.3,4.0
+S1008,Beauty Accessories,UK,25700,22,660,25,4.0,4,3.5,86,22,Healthy,4.1,4.6
+S1009,Office Products,US,43600,-7,1030,-9,3.8,-5,2.6,74,29,Low,5.9,4.3
+S1010,Office Products,DE,19500,16,440,18,3.3,3,3.0,79,16,Healthy,3.7,4.5
+S1011,Fitness Accessories,US,81900,27,1940,29,4.2,5,3.6,83,51,Healthy,4.6,4.6
+S1012,Fitness Accessories,JP,28200,10,690,11,3.0,1,2.4,69,20,Healthy,6.8,4.2

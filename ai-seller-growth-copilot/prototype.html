@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Seller Growth Copilot Prototype</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f6f7f9; color: #111827; }
+    header { background: #111827; color: white; padding: 24px 40px; }
+    main { padding: 32px 40px; max-width: 1180px; margin: auto; }
+    .grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; }
+    .card { background: white; border-radius: 14px; padding: 22px; box-shadow: 0 2px 10px rgba(0,0,0,.06); margin-bottom: 20px; }
+    .alert { border-left: 6px solid #f59e0b; }
+    .metric-row, .action-row { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
+    .action-row { grid-template-columns: .5fr 1.4fr 1.6fr .7fr .8fr; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #fee2e2; color: #991b1b; font-size: 12px; }
+    .good { background: #dcfce7; color: #166534; }
+    .medium { background: #fef3c7; color: #92400e; }
+    button { background: #ff9900; border: none; padding: 12px 18px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    h1, h2, h3 { margin-top: 0; }
+    .big { font-size: 32px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Seller Growth Copilot</h1>
+    <p>Diagnose seller growth blockers and generate prioritized action plans.</p>
+  </header>
+  <main>
+    <section class="grid">
+      <div>
+        <div class="card alert">
+          <h2>Growth Diagnosis</h2>
+          <p class="big">Sales dropped 18%</p>
+          <p>Traffic is stable, but conversion dropped by 21%. The main blocker is likely conversion quality.</p>
+          <button>Generate Action Plan</button>
+        </div>
+        <div class="card">
+          <h2>Key Metrics</h2>
+          <div class="metric-row"><strong>Metric</strong><strong>Current</strong><strong>Change</strong><strong>Status</strong></div>
+          <div class="metric-row"><span>Sales</span><span>$18,400</span><span>-18%</span><span class="pill">Needs attention</span></div>
+          <div class="metric-row"><span>Sessions</span><span>42,300</span><span>+2%</span><span class="pill good">Stable</span></div>
+          <div class="metric-row"><span>Conversion Rate</span><span>3.1%</span><span>-21%</span><span class="pill">Main issue</span></div>
+          <div class="metric-row"><span>Ad ROAS</span><span>2.4</span><span>-16%</span><span class="pill medium">Watch</span></div>
+        </div>
+        <div class="card">
+          <h2>Recommended Action Plan</h2>
+          <div class="action-row"><strong>Priority</strong><strong>Action</strong><strong>Reason</strong><strong>Effort</strong><strong>Metric</strong></div>
+          <div class="action-row"><span>P0</span><span>Improve title and first two bullets</span><span>Value proposition is not clear enough</span><span>Low</span><span>Conversion</span></div>
+          <div class="action-row"><span>P1</span><span>Test 7-day promotion</span><span>Price competitiveness weakened</span><span>Medium</span><span>Margin</span></div>
+          <div class="action-row"><span>P1</span><span>Replace secondary images</span><span>Benefits are not visually clear</span><span>Medium</span><span>Add-to-cart</span></div>
+          <div class="action-row"><span>P2</span><span>Pause low-converting keywords</span><span>ROAS declined</span><span>Low</span><span>ROAS</span></div>
+        </div>
+      </div>
+      <aside>
+        <div class="card">
+          <h3>Evidence</h3>
+          <ul>
+            <li>Sessions increased by 2%.</li>
+            <li>Conversion rate dropped by 21%.</li>
+            <li>Inventory and reviews are stable.</li>
+            <li>Listing quality score is medium.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Confidence</h3>
+          <p class="pill good">Medium-high</p>
+          <p>The issue is likely after shoppers land on the product page.</p>
+        </div>
+        <div class="card">
+          <h3>PM Note</h3>
+          <p>Prioritize explainability and measurable action before full automation.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

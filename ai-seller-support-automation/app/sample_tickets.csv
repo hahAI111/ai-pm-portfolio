@@ -1,0 +1,6 @@
+ticket_id,seller_id,subject,message,priority
+T1001,S1001,Sales dropped,My sales decreased this week even though ad spend stayed the same. What should I check first?,High
+T1002,S1002,Listing help,My product page gets views but few orders. Can you suggest improvements?,Medium
+T1003,S1003,Advertising question,Which advertising keywords should I pause when my ROAS is declining?,Medium
+T1004,S1004,Inventory issue,I only have a few units left for my top product. What should I do?,High
+T1005,S1005,Policy clarification,Can I make this health claim in my product description?,High
