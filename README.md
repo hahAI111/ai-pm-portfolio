@@ -4,6 +4,10 @@ Three independent, working product MVPs for AI Product Manager roles in cross-bo
 
 > **Portfolio note:** All datasets, metrics, outcomes, and recommendations in this repository are synthetic demonstrations. They are not Amazon data, production systems, or claimed business results.
 
+## Watch the Demo
+
+[Watch or download the captioned 63-second portfolio walkthrough](https://github.com/hahAI111/ai-pm-portfolio/releases/download/v1.0-portfolio-demo/ai-pm-portfolio-demo-captioned.mp4) · [View the release](https://github.com/hahAI111/ai-pm-portfolio/releases/tag/v1.0-portfolio-demo)
+
 ## Portfolio Projects
 
 | Project | PM Question Addressed | Working MVP | Core Evidence |
