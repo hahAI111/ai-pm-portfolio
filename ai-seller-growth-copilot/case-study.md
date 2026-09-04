@@ -39,6 +39,10 @@ The system uses a hybrid AI approach:
 - LLM-generated seller-facing explanations and action plans
 - Feedback loop to track accepted recommendations and business outcomes
 
+## AI Boundary and Evaluation Design
+
+Seller metrics and growth-blocker rules are deterministic because they are structured business facts. Azure AI Foundry turns the evidence into concise seller-facing explanations. A production knowledge experience would retrieve approved marketplace guidance, cite sources, and separately evaluate retrieval quality, groundedness, action completion, business impact, and safety.
+
 ## Success Metrics
 
 | Metric | Purpose |

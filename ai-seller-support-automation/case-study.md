@@ -12,6 +12,14 @@ I built a working AI support MVP that classifies seller tickets, retrieves relev
 - Escalate policy-sensitive questions rather than presenting an uncertain answer.
 - Measure draft acceptance, ticket deflection, handling time, and first-contact resolution.
 
+## AI and Control Boundaries
+
+The LLM drafts a clear response only after deterministic ticket classification and approved-guidance retrieval. Policy escalation and future authorization checks remain deterministic controls. Any future workflow that changes seller accounts, listings, or advertising must validate identity and permissions in the backend, request approval, and create an audit record.
+
+## RAG Evolution Plan
+
+The MVP uses local category retrieval to keep the workflow transparent. A production version would use approved source ingestion, structure-aware chunking, hybrid keyword and vector retrieval, reranking, citations, and layered evaluation. Retrieval optimizes evidence recall; reranking improves the precision of context sent to the model.
+
 ## Stakeholder Collaboration Plan
 
 | Stakeholder | Need or concern | PM interaction | Shared decision / metric |

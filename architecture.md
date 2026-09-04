@@ -20,6 +20,14 @@ The MVPs intentionally use transparent deterministic rules rather than claiming 
 
 For production, retain deterministic validation and retrieval controls: classify intent and risk, route sensitive questions to a human review queue, retrieve approved knowledge for low-risk questions, generate a draft, validate the output and confidence, then collect feedback and evaluation data.
 
+## AI Boundary Pattern Used in This Portfolio
+
+The LLM is used for explanation and response drafting. Structured seller facts come from CSV data, diagnosis and policy escalation use deterministic logic, and external changes remain future human-approved actions. This mirrors a production design where models assist with uncertainty rather than replace factual, policy, or authorization controls.
+
+## Retrieval Improvement Roadmap
+
+The current support demo uses category-based retrieval from a local approved knowledge base. A production RAG version would add source ingestion, structure-aware chunking, hybrid retrieval, reranking, citations, and separate retrieval-versus-generation evaluation.
+
 ## Production Evaluation
 
 - **Quality:** recommendation acceptance rate, agent draft acceptance rate, grounded-response accuracy.
