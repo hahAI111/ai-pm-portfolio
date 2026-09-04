@@ -53,6 +53,11 @@ flowchart LR
 - [Interview Guide](./interview-guide.md)
 - [Technical PM Logbook](./technical-pm-logbook.md)
 - [Next-Phase Roadmap](./next-phase-roadmap.md)
+- [Resume Application Version](./resume-application-version.md)
+- [Interview Practice](./interview-practice.md)
+- [Pilot Feedback Form](./pilot/pilot-feedback-form.md)
+- [Pilot Results Template](./pilot/pilot-results-template.md)
+- [Scale Iterate Stop Memo](./pilot/scale-iterate-stop-memo-template.md)
 - [PM Ownership Evidence Plan](./pm-ownership-evidence.md)
 
 The logbook also includes portfolio-specific answers on rules versus LLMs, MVP RAG boundaries, safe agent autonomy, and quality/safety expansion criteria.
