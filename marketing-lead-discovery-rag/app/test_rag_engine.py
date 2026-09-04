@@ -5,7 +5,7 @@ import unittest
 import pandas as pd
 
 sys.path.append(str(pathlib.Path(__file__).parent))
-from rag_engine import build_profile, evaluate_golden_dataset, rerank_candidates, retrieve_candidates
+from rag_engine import build_profile, citation_correctness, evaluate_golden_dataset, rerank_candidates, retrieve_candidates
 
 
 class LeadDiscoveryRagTests(unittest.TestCase):
@@ -32,6 +32,13 @@ class LeadDiscoveryRagTests(unittest.TestCase):
         profile = build_profile(rerank_candidates(retrieve_candidates(self.sources, query), query))
         self.assertEqual(profile["company_name"], "Northstar Home")
         self.assertTrue(all(citation["source_id"] in {"S001", "S002"} for citation in profile["citations"]))
+
+    def test_citation_checker_rejects_unknown_sources(self):
+        citations = [{"source_id": "S001"}]
+        valid = citation_correctness("Evidence supports this [S001].", citations)
+        invalid = citation_correctness("Evidence supports this [S999].", citations)
+        self.assertTrue(valid["citation_valid"])
+        self.assertEqual(invalid["invalid_ids"], ["S999"])
 
 
 if __name__ == "__main__":

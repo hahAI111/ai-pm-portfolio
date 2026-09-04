@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 
-from rag_engine import build_profile, evaluate_golden_dataset, rerank_candidates, retrieve_candidates
+from rag_engine import build_profile, citation_correctness, evaluate_golden_dataset, rerank_candidates, retrieve_candidates
+from llm_client import azure_openai_available, generate_grounded_profile
 
 st.set_page_config(page_title="Marketing Lead Discovery RAG", layout="wide")
 st.title("Marketing Lead Discovery RAG")
@@ -49,6 +50,23 @@ with left:
     st.write(profile["profile"])
     st.write("**ICP evidence:** " + ", ".join(profile["icp_reasons"]))
     st.caption("The profile is an advisory research draft. A reviewer validates fit and approved sources before any outreach decision.")
+    if st.button("Generate Azure AI Foundry profile"):
+        if not azure_openai_available():
+            st.info("Azure AI Foundry is not configured locally. The deterministic cited profile remains available.")
+        else:
+            try:
+                with st.spinner("Generating a citation-grounded profile..."):
+                    llm_profile = generate_grounded_profile(profile)
+                st.subheader("Azure AI Foundry Profile Draft")
+                st.write(llm_profile)
+                citation_check = citation_correctness(llm_profile, profile["citations"])
+                if citation_check["citation_valid"]:
+                    st.success("Citation check passed: " + ", ".join(citation_check["cited_ids"]))
+                else:
+                    st.error("Citation check failed. Invalid or missing source IDs: " + ", ".join(citation_check["invalid_ids"] or ["none found"]))
+                st.caption("Generated only from the citations shown below. Human review is required before outreach.")
+            except Exception:
+                st.warning("Azure AI Foundry was unavailable. The deterministic cited profile remains the fallback.")
 with right:
     st.subheader("Retrieval Pipeline")
     st.write("1. Hybrid candidate retrieval")

@@ -81,3 +81,15 @@ def evaluate_golden_dataset(sources: pd.DataFrame, golden: pd.DataFrame) -> pd.D
         precision = len(ids & expected_ids) / len(ids) if ids else 0
         results.append({"query": case["query"], "lead_retrieved": lead_match, "recall_at_3": recall, "precision_at_3": precision})
     return pd.DataFrame(results)
+
+
+def citation_correctness(draft: str, citations: list[dict]) -> dict:
+    """Check that cited source IDs exist and each source-backed claim uses a valid ID."""
+    valid_ids = {source["source_id"] for source in citations}
+    cited_ids = set(re.findall(r"\[([A-Za-z0-9_-]+)\]", draft))
+    invalid_ids = cited_ids - valid_ids
+    return {
+        "cited_ids": sorted(cited_ids),
+        "invalid_ids": sorted(invalid_ids),
+        "citation_valid": bool(cited_ids) and not invalid_ids,
+    }
