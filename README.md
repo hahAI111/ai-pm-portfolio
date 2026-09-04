@@ -47,6 +47,7 @@ flowchart LR
 - [Growth Copilot Case Study](./ai-seller-growth-copilot/case-study.md)
 - [Opportunity Dashboard Case Study](./marketplace-opportunity-dashboard/case-study.md)
 - [Support Automation Case Study](./ai-seller-support-automation/case-study.md)
+- [Deployment Guide](./DEPLOYMENT.md)
 
 ## Screenshots and Demo Recording
 
