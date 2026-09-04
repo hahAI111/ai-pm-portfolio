@@ -49,6 +49,8 @@ flowchart LR
 - [Architecture and AI Safety](./architecture.md)
 - [Interview Guide](./interview-guide.md)
 - [Technical PM Logbook](./technical-pm-logbook.md)
+- [Next-Phase Roadmap](./next-phase-roadmap.md)
+- [PM Ownership Evidence Plan](./pm-ownership-evidence.md)
 
 The logbook also includes portfolio-specific answers on rules versus LLMs, MVP RAG boundaries, safe agent autonomy, and quality/safety expansion criteria.
 - [Growth Copilot Case Study](./ai-seller-growth-copilot/case-study.md)
