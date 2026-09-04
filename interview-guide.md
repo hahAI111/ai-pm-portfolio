@@ -36,3 +36,17 @@ Use the heading **Independent AI Product Portfolio Projects — Global Seller Gr
 Use this answer when asked how the portfolio would work in a real organization:
 
 I would begin by aligning the stakeholder system rather than treating the request as only an LLM feature. Sellers need useful and trustworthy actions. Seller-success and support teams need workflows that reduce repeated work. Data and engineering teams need feasible data boundaries and observable logic. Policy owners need escalation for sensitive decisions, while leadership needs measurable ROI. I would use a pilot to align these groups around shared metrics: action completion and business impact for adoption, quality and override rate for the operating teams, and escalation recall for safety. The rollout decision would depend on all three dimensions, not on usage alone.
+
+## Technical PM Follow-up Answers
+
+### How do you prevent the LLM from making business decisions?
+
+I define a clear control boundary. Structured facts are read from data systems, deterministic logic handles threshold and policy decisions, and the LLM only creates a natural-language explanation or draft based on the approved context. Any future action is permission-checked by the backend and requires the appropriate seller or human approval.
+
+### How would you evaluate the Support Automation knowledge experience?
+
+I would separate the evaluation into retrieval, generation, and product value. First, verify that the right approved guidance is retrieved. Then measure whether the draft is grounded, complete, and safe. Finally, evaluate agent acceptance, rewrite rate, first-contact resolution, handling time, and sensitive-request escalation recall.
+
+### What would you build next, and why?
+
+For Support Automation, I would build citations and a reviewer feedback workflow before adding more automated actions. This creates meaningful incremental learning about trust, knowledge quality, and escalation coverage without prematurely expanding the risk boundary.

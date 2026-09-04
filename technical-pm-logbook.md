@@ -61,3 +61,25 @@ Latency depends on user context. The goal is sufficient evidence with minimal un
 An MVP is the smallest usable product that validates the most important assumption, not the smallest feature list. Prioritize by customer pain, business value, confidence, risk, effort, and **incremental learning**.
 
 **Interview answer:** “I compare incremental learning, not only engineering effort. I invest when a feature validates a critical unknown, and defer similar functionality after the core workflow is proven.”
+
+## 6. Portfolio-Specific Technical Answers
+
+### Why does the Seller Growth Copilot use both rules and an LLM?
+
+Seller sales, sessions, conversion, inventory, and ROAS are structured facts. The MVP uses transparent rules to create a repeatable diagnosis and exposes evidence and confidence. Azure AI Foundry then improves the natural-language explanation. This separates factual diagnosis from language generation and makes the failure mode easier to evaluate.
+
+### Is the Support Automation MVP already a full RAG system?
+
+No. It is a retrieval-oriented MVP using a small approved knowledge base and category matching. The MVP validates whether grounded drafting and escalation improve support workflows. The next stage is a production RAG architecture with source ingestion, semantic chunking, hybrid search, reranking, citations, access controls, and layered evaluation.
+
+### Why not make the Seller Growth Copilot an autonomous agent?
+
+The MVP does not need dynamic tool execution to test its primary hypothesis: can evidence-backed recommendations help sellers select and complete better actions? Listing changes, pricing, and advertising updates may have business or policy impact, so they require explicit seller approval and future backend authorization. Agent autonomy should match the risk and reversibility of an action.
+
+### How would you decide whether to expand the MVP?
+
+I would require evidence across product value, quality, and safety. For example: recommendation acceptance and action completion show adoption; conversion or ROAS movement show business value; incorrect recommendation rate, escalation recall, and human overrides show safety. I would only expand the automation boundary when all three meet predefined thresholds.
+
+### What is the highest-risk failure mode?
+
+For Support Automation, a sensitive policy request could be incorrectly treated as low-risk and receive unsupported guidance. The design response is deterministic risk classification, conservative escalation, approved-source grounding, human review, and audit logging. For Growth Copilot, the risk is presenting a causal conclusion with more certainty than the data supports; the product therefore displays evidence, confidence, and advisory—not automatic—actions.
