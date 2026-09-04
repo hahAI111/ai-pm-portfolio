@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:09,000
+I built three working AI product MVPs for the cross-border marketplace seller lifecycle.
+
+2
+00:00:09,000 --> 00:00:18,000
+The Opportunity Discovery Dashboard turns seller performance signals into a transparent prioritized product backlog.
+
+3
+00:00:18,000 --> 00:00:27,000
+The Seller Growth Copilot identifies the most likely blocker behind a change in seller performance.
+
+4
+00:00:27,000 --> 00:00:36,000
+It connects recommendations, seller-approved actions, feedback, and measurable outcomes.
+
+5
+00:00:36,000 --> 00:00:45,000
+Support Automation classifies seller tickets and retrieves approved guidance to draft responses.
+
+6
+00:00:45,000 --> 00:00:54,000
+Policy-sensitive requests are escalated to human review instead of receiving an unsupported answer.
+
+7
+00:00:54,000 --> 00:01:03,000
+The portfolio demonstrates product discovery, measurable AI experiences, and human-in-the-loop guardrails.
