@@ -81,6 +81,14 @@ cd ai-seller-support-automation/app
 streamlit run app.py --server.port 8503
 ```
 
+## Verify the Decision Logic
+
+The portfolio includes lightweight unit tests for the diagnosis, prioritization, and safety logic.
+
+```powershell
+./run-tests.ps1
+```
+
 ## Suggested Resume Framing
 
 **Independent AI Product Portfolio Projects — Global Seller Growth**
