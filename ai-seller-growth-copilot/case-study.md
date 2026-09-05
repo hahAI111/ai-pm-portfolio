@@ -1,4 +1,25 @@
-# Portfolio Case Study: AI Seller Growth Copilot
+# AI Seller Growth Copilot
+
+## Executive Summary
+
+An independent AI product prototype for cross-border marketplace sellers. It turns fragmented performance signals into an explainable diagnosis and a prioritized action plan, then measures whether the seller completed the recommended work. The prototype uses synthetic data and does not claim production business results.
+
+## Product Decision
+
+Sellers do not need another dashboard. They need help deciding what to do next. The MVP focuses on one narrow hypothesis: evidence-backed recommendations will help sellers complete higher-value growth actions than metrics alone.
+
+## Product Flow
+
+1. Ingest seller sales, sessions, conversion, ROAS, listing, price, and inventory signals.
+2. Diagnose the likely blocker with deterministic rules.
+3. Explain the evidence and confidence.
+4. Generate a ranked action plan with effort and target metric.
+5. Require seller approval; track completion and feedback.
+6. Compare post-action metrics in a clearly labeled outcome simulation.
+
+## Why This Is an AI Product
+
+Structured business facts and diagnosis rules remain deterministic. Azure AI Foundry is used for natural-language explanation and response drafting. This keeps the model away from unsupported causal claims and automatic marketplace changes.
 
 ## Project Overview
 AI Seller Growth Copilot is an AI product concept for cross-border marketplace sellers. It helps sellers diagnose growth blockers, understand why performance changed, and take prioritized actions across listing quality, conversion, advertising efficiency, and seller growth.

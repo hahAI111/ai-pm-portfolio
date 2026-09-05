@@ -10,6 +10,8 @@ Three independent, working product MVPs for AI Product Manager roles in cross-bo
 
 [Download the AI PM Portfolio Casebook PDF](./output/pdf/AI_PM_Portfolio_Casebook.pdf)
 
+[Download the English resume](./output/pdf/Aimee_Wang_AI_Product_Portfolio_Resume.pdf)
+
 ## Portfolio Projects
 
 | Project | PM Question Addressed | Working MVP | Core Evidence |
