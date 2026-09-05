@@ -51,6 +51,7 @@ flowchart LR
 
 ## Supporting Materials
 
+- [Synthetic Support Evaluation: 20 Scenarios and Baseline Evidence](./ai-seller-support-automation/evaluation/README.md) - AI-authored offline checks of the real deterministic engine; not a customer pilot.
 - [Architecture and AI Safety](./architecture.md)
 - [Interview Guide](./interview-guide.md)
 - [Technical PM Logbook](./technical-pm-logbook.md)
